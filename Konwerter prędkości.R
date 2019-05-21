@@ -15,12 +15,24 @@
 
 
 #zbiór funkcji do przeliczania kilometrów na godzinę na inne jednostki
+
 kmh_mph <- function(prędkość_kmh){
-  prędkość_kmh/1.609344
+  if(prędkość_kmh<0){
+  stop("Prędkość musi być wartością dodatnią!")
+  }
+  else if(!(is.numeric(prędkość_kmh))){
+    stop("Podaj wartość numeryczną!")
+  }
+ else paste(prędkość_kmh, "kilometrów na godzinę to",
+                                prędkość_kmh/1.609344,"mil na godzinę.")
+ 
 }
+
+
 kmh_kms <- function(prędkość_kmh){
   prędkość_kmh/3600
 }
+kmh_kms(10)
 kmh_ms <- function(prędkość_kmh){
   prędkość_kmh*0.277778
 }
@@ -30,6 +42,7 @@ kmh_mps <- function(prędkość_kmh){
 kmh_kn <- function(prędkość_kmh){
   prędkość_kmh*0.53995726994149
 }
+
 
 #zbiór funkcji do przeliczania mili na godzinę na inne jednostki
 mph_kmh <- function(prędkość_mph){
