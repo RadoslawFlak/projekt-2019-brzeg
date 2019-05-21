@@ -72,4 +72,5 @@ mps_mph <- function(prędkość_mps){
 }
 mps_mph(10) 
   
+mps_kmh
   
