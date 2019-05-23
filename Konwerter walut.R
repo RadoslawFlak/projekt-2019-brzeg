@@ -135,6 +135,8 @@ Kupno_GBP = function(PLN){
   cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/GBP_K, digits = 2), "GBP." ))  
 }
 }
+# Program:
+{
 # 1. Przelicznik AUD (dolary australijskie)
 Kupno_AUD()
 Sprzedaz_AUD()
@@ -177,3 +179,5 @@ Sprzedaz_SEK()
 # 14. Przelicznik USD (dolary amerykańskie)
 Kupno_USD()
 Sprzedaz_USD()
+}
+# Dziękujemy za korzystanie z naszych usług. 
