@@ -21,6 +21,8 @@
 #mila_morska[NM]
 #liga_morska[lm]
 
+#Aby przeliczyć jednostkę wpisz jej skrót, wpisz skrót jednostki, którą chcesz otrzymać a ich nazwy oddziel od siebie podkreślnikiem, 
+#pamiętaj, że jednostki ujemne muszą być liczbami, oraz nie mogą przyjmować wartości ujemnych.
 
 ###KONWERSJA PODSTAWOWYCH JEDNOSTEK SYSTEMU METRYCZNEGO
 
