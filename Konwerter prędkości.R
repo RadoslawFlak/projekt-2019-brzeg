@@ -13,7 +13,8 @@
 # jej skrót. Skróty oddziel podkreślnikiem. 
 # Przykład: kmh_mph("tu wpisz wartość którą chcesz przeliczyć")
 #
-# Możesz przliczać jednostki poniżej.
+# Możesz przliczać jednostki poniżej. Przed użyciem zaznacz wszystko (ctrl+a) i użyj skrótu ctrl + enter,
+# aby wczytać wszystkie funkcje.
 
 
 
