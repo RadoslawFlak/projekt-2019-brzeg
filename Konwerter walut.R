@@ -3,6 +3,9 @@
 # Wybraliśmy 14 najpopularniejszych przeliczników według strony kantory.pl
 #
 # Ponadto celu późniejszej optymalniejszej i szybszej zmiany kursów użyliśmy wartości nie w wzorze funkcji a jako osobny argument.
+#
+#Aby wszystko zadziałało, należy przejść do podsekcji Program (154 wers) i w zależności od interesującej nas wymiany waluty, wpisać w odpowiednie pole sumę.
+#
 # Funkcje:
 {
 # Legenda:
@@ -17,6 +20,7 @@ Sprzedaz_AUD = function(AUD){
 Kupno_AUD = function(PLN){
   cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/AUD_K, digits = 2), "AUD." ))  
 }
+
 # BGN - lew bułgarski       - Bułgaria
 BGN_K = 2.1980
 BGN_S = 2.2974
@@ -26,6 +30,7 @@ Sprzedaz_BGN = function(BGN){
 Kupno_BGN = function(PLN){
   cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/BGN_K, digits = 2), "BGN." ))  
 }
+
 # HRK - kuna chorwacka      - Chorwacja
 HRK_K = 0.5609
 HRK_S = 0.6055
@@ -35,6 +40,7 @@ Sprzedaz_HRK = function(HRK){
 Kupno_HRK = function(PLN){
   cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/HRK_K, digits = 2), "HRK." ))  
 }
+
 # CZK - korona czeska       - Czechy
 CZK_K = 0.1646
 CZK_S = 0.1704
@@ -44,6 +50,7 @@ Sprzedaz_CZK = function(CZK){
 Kupno_CZK = function(PLN){
   cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/CZK_K, digits = 2), "CZK." ))  
 }
+
 # DKK - korona duńska       - Dania
 DKK_K = 0.5643
 DKK_S = 0.5845
@@ -53,6 +60,7 @@ Sprzedaz_DKK = function(DKK){
 Kupno_DKK = function(PLN){
   cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/DKK_K, digits = 2), "DKK." ))  
 }
+
 # CAD - dolar kanadyjski    - Kanada
 CAD_K = 2.8289
 CAD_S = 2.8985
@@ -62,6 +70,7 @@ Sprzedaz_CAD = function(CAD){
 Kupno_CAD = function(PLN){
   cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/CAD_K, digits = 2), "CAD." ))  
 }
+
 # NOK - korona norweska     - Norwegia
 NOK_K = 0.4302
 NOK_S = 0.4442
@@ -71,6 +80,7 @@ Sprzedaz_NOK = function(NOK){
 Kupno_NOK = function(PLN){
   cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/NOK_K, digits = 2), "NOK." ))  
 }
+
 # RON - lej rumuński        - Rumunia
 RON_K = 0.9044
 RON_S = 0.9624
@@ -80,6 +90,7 @@ Sprzedaz_RON = function(RON){
 Kupno_RON = function(PLN){
   cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/RON_K, digits = 2), "RON." ))  
 }
+
 # CHF - frank szwajcarski   - Szwajcaria
 CHF_K = 3.7913
 CHF_S = 3.8393
@@ -89,6 +100,7 @@ Sprzedaz_CHF = function(CHF){
 Kupno_CHF = function(PLN){
   cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/CHF_K, digits = 2), "CHF." ))  
 }
+
 # SEK - korona szwedzka     - Szwecja
 SEK_K = 0.3882
 SEK_S = 0.4048
@@ -98,6 +110,7 @@ Sprzedaz_SEK = function(SEK){
 Kupno_SEK = function(PLN){
   cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/SEK_K, digits = 2), "SEK." ))  
 }
+
 # EUR - euro                - Unia Europejska (strefa euro)
 EUR_K = 4.2609
 EUR_S = 4.3270
@@ -107,6 +120,7 @@ Sprzedaz_EUR = function(EUR){
 Kupno_EUR = function(PLN){
   cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/EUR_K, digits = 2), "EUR." ))  
 }
+
 # USD - dolar amerykański   - USA
 USD_K = 3.8220
 USD_S = 3.8949
@@ -116,6 +130,7 @@ Sprzedaz_USD = function(USD){
 Kupno_USD = function(PLN){
   cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/USD_K, digits = 2), "USD." ))  
 }
+
 # HUF - forint węgierski    - Węgry
 HUF_K = 0.7516
 HUF_S = 0.8011
@@ -125,6 +140,7 @@ Sprzedaz_HUF = function(HUF){
 Kupno_HUF = function(PLN){
   cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/HUF_K, digits = 2), "HUF." ))  
 }
+
 # GBP - funt brytyjski      - Wielka Brytania
 GBP_K = 4.8568
 GBP_S = 4.9380

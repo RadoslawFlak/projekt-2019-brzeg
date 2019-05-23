@@ -12,6 +12,8 @@
 # Odnośnie powyższego komunikatu - Nowe nazwy zostały opracowane przez IEC w 1997 lecz ze względu na małe przebicie JEDEC zmieniło ponownie znaczenia słów (ale jedynie w standardach pamięci)
 # Inna rzecz warta odnotowania, to fakt, że to właśnie z powodu tego 'konfliktu' nazw kupując dysk SSD np. 250Gb w rzeczywistości mamy mniej niż oczekiwane 250GB.
 #
+# Aby wszystko zadziałało, należy przejść do podsekcji Program (127 wers) i zastosować się do polecenia.
+#
 # Funkcje:
 {
 options(scipen=999)
@@ -126,7 +128,7 @@ Typ = function(TypF){
 {
   
 # Podaj rozmiar wraz z jednostką. (Example: "1024KB")
-Typ("1000PB")
+Typ("")
   
 }
 # Dziękujemy za korzystanie z naszych usług. 
