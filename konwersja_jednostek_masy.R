@@ -17,7 +17,7 @@
 #kwintal[q]
 
 #Aby przeliczyć jednostkę wpisz jej skrót, wpisz skrót jednostki, którą chcesz otrzymać a ich nazwy oddziel od siebie podkreślnikiem, 
-#pamiętaj, że jednostki ujemne muszą być liczbami, oraz nie mogą przyjmować wartości ujemnych.
+#pamiętaj, że jednostki  muszą być liczbami, oraz nie mogą przyjmować wartości ujemnych.
 
 ##1.GRAM
 
