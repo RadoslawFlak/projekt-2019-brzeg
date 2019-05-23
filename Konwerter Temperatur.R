@@ -174,4 +174,3 @@ R_N <- function(stopnie_R){
   else paste(stopnie_R,"stopni Rømera to",((stopnie_R-7.5)*40/21)*33/100,
              "stopni Newtona")
 }
-R_N(11)
