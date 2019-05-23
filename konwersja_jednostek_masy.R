@@ -3,19 +3,21 @@
 #konwerter zawiera następujące jednostki:
 
 #a)podstawowe jednostki systemu metrycznego:
-gram[g]
-dekagram[dkg]
-kilogram[kg]
-tona[Tn]
+#gram[g]
+#dekagram[dkg]
+#kilogram[kg]
+#tona[Tn]
 
 #b)jednostki anglosaskie:
-uncja[oz]
-funt[lb]
+#uncja[oz]
+#funt[lb]
 
 #c) inne jednostki
-karat[ct]
-kwintal[q]
+#karat[ct]
+#kwintal[q]
 
+#Aby przeliczyć jednostkę wpisz jej skrót, wpisz skrót jednostki, którą chcesz otrzymać a ich nazwy oddziel od siebie podkreślnikiem, 
+#pamiętaj, że jednostki ujemne muszą być liczbami, oraz nie mogą przyjmować wartości ujemnych.
 
 ##1.GRAM
 
