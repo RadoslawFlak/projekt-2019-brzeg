@@ -136,13 +136,11 @@ Kupno_AUD = function(PLN){
 }
 
 # BGN - lew bułgarski       - Bułgaria
-BGN_K = 2.1980
-BGN_S = 2.2974
 Sprzedaz_BGN = function(BGN){
-  cat(paste("Przy wpłacie", BGN, "BGN, otrzymamy", round(BGN*BGN_S, digits = 2), "PLN." ))  
+  cat(paste("Przy wpłacie", BGN, "PLN, otrzymamy", round(BGN*Kursy_BGN$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_BGN = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/BGN_K, digits = 2), "BGN." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.BGN, digits = 2), "BGN." )) 
 }
 
 # HRK - kuna chorwacka      - Chorwacja
