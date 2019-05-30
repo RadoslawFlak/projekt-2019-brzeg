@@ -48,16 +48,16 @@ Przykład użycia konwertera:
 
 1. Załóżmy, że chcemy wymienić 100 dolarów amerykańskich na złotówki.
 
-a) wpisujemy: sprzedaz_USD(100)
+    a) wpisujemy: sprzedaz_USD(100)
 
-b)otrzymujemy informację zwrotną na podstawie obecnego kursu walut:
+    b)otrzymujemy informację zwrotną na podstawie obecnego kursu walut:
 
 "Przy wpłacie 100 USD, otrzymamy 385.19 PLN."
 
 2. Przy wymianie 100 złotych na dolary amerykańskie:
 
-a) wpisujemy: kupno_USD(100)
+    a) wpisujemy: kupno_USD(100)
 
-b) otrzymujemy informację zwrotną na podstawie obecnego kursu walut:
+    b) otrzymujemy informację zwrotną na podstawie obecnego kursu walut:
 
 "Przy wpłacie 100 PLN, otrzymamy 25.96 USD."
