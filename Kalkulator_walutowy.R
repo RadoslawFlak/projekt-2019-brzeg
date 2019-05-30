@@ -154,7 +154,7 @@ Sprzedaz_DKK = function(DKK){
   cat(paste("Przy wpłacie", DKK, "DKK, otrzymamy", round(DKK*Kursy_DKK$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_DKK = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_DKK$rates.DKK, digits = 2), "DKK." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.DKK, digits = 2), "DKK." ))  
 }
 
 # CAD - dolar kanadyjski    - Kanada
@@ -162,7 +162,7 @@ Sprzedaz_CAD = function(CAD){
   cat(paste("Przy wpłacie", CAD, "CAD, otrzymamy", round(CAD*Kursy_CAD$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_CAD = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_CAD$rates.CAD, digits = 2), "CAD." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.CAD, digits = 2), "CAD." ))  
 }
 
 # NOK - korona norweska     - Norwegia
@@ -170,7 +170,7 @@ Sprzedaz_NOK = function(NOK){
   cat(paste("Przy wpłacie", NOK, "NOK, otrzymamy", round(NOK*Kursy_NOK$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_NOK = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_NOK$rates.NOK, digits = 2), "NOK." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.NOK, digits = 2), "NOK." ))  
 }
 
 # RON - lej rumuński        - Rumunia
@@ -178,7 +178,7 @@ Sprzedaz_RON = function(RON){
   cat(paste("Przy wpłacie", RON, "RON, otrzymamy", round(RON*Kursy_RON$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_RON = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_RON$rates.RON, digits = 2), "RON." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.RON, digits = 2), "RON." ))  
 }
 
 # CHF - frank szwajcarski   - Szwajcaria
@@ -186,7 +186,7 @@ Sprzedaz_CHF = function(CHF){
   cat(paste("Przy wpłacie", CHF, "CHF, otrzymamy", round(CHF*Kursy_CHF$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_CHF = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_CHF$rates.CHF, digits = 2), "CHF." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.CHF, digits = 2), "CHF." ))  
 }
 
 # SEK - korona szwedzka     - Szwecja
@@ -194,7 +194,7 @@ Sprzedaz_SEK = function(SEK){
   cat(paste("Przy wpłacie", SEK, "SEK, otrzymamy", round(SEK*Kursy_SEK$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_SEK = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_SEK$rates.SEK, digits = 2), "SEK." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.SEK, digits = 2), "SEK." ))  
 }
 
 # EUR - euro                - Unia Europejska (strefa euro)
@@ -202,15 +202,15 @@ Sprzedaz_EUR = function(EUR){
   cat(paste("Przy wpłacie", EUR, "EUR, otrzymamy", round(EUR*Kursy_EUR$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_EUR = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_EUR$rates.EUR, digits = 2), "EUR." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.EUR, digits = 2), "EUR." ))  
 }
 
 # USD - dolar amerykański   - USA
 Sprzedaz_USD = function(USD){
-  cat(paste("Przy wpłacie", USD, "USD, otrzymamy", round(USD*kURSY_USD$rates.PLN, digits = 2), "PLN." ))  
+  cat(paste("Przy wpłacie", USD, "USD, otrzymamy", round(USD*Kursy_USD$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_USD = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_USD$rates.USD, digits = 2), "USD." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.USD, digits = 2), "USD." ))  
 }
 
 # HUF - forint węgierski    - Węgry
@@ -220,7 +220,7 @@ Sprzedaz_HUF = function(HUF){
   cat(paste("Przy wpłacie", HUF, "HUF, otrzymamy", round(HUF*Kursy_HUF$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_HUF = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_HUF$rates.HUF, digits = 2), "HUF." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.HUF, digits = 2), "HUF." ))  
 }
 
 # GBP - funt brytyjski      - Wielka Brytania
@@ -230,7 +230,7 @@ Sprzedaz_GBP = function(GBP){
   cat(paste("Przy wpłacie", GBP, "GBP, otrzymamy", round(GBP*Kursy_GBP$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_GBP = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_GBP$rates.GBP, digits = 2), "GBP." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.GBP, digits = 2), "GBP." ))  
 }
 # Program -----------------------------------------------------------------
 # Wczytaj dane:
