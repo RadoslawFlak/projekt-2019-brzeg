@@ -101,28 +101,28 @@
   }
 # Funkcje -----------------------------------------------------------------
 # AUD - dolar australijski  - Australia
-Sprzedaz_AUD = function(AUD){ 
-  {if(AUD=<0){
+Sprzedaz_AUD = function(AUD){
+  if(AUD<=0){
   stop("Waluta musi być wartością większą od zera!")
-}
+   }
   else if(!(is.numeric(AUD))){
     stop("Podaj wartość numeryczną!")
   }
-  cat(paste("Przy wpłacie", AUD, "AUD, otrzymamy", round(AUD*Kursy_AUD$rates.PLN, digits = 2), "PLN." ))  
+ else cat(paste("Przy wpłacie", AUD, "AUD, otrzymamy", round(AUD*Kursy_AUD$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_AUD = function(PLN){
-   {if(PLN=<0){
+   if(PLN<=0){
   stop("Waluta musi być wartością dodatnią!")
-}
+   }
   else if(!(is.numeric(PLN))){
     stop("Podaj wartość numeryczną!")
   }
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.AUD, digits = 2), "AUD." ))  
+ else cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.AUD, digits = 2), "AUD." ))  
 }
   
 # BGN - lew bułgarski       - Bułgaria
 Sprzedaz_BGN = function(BGN){
-   {if(BGN=<0){
+   if(BGN<=0){
   stop("Waluta musi być wartością większą od zera!")
 }
   else if(!(is.numeric(BGN))){
@@ -131,7 +131,7 @@ Sprzedaz_BGN = function(BGN){
   cat(paste("Przy wpłacie", BGN, "BGN, otrzymamy", round(BGN*Kursy_BGN$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_BGN = function(PLN){
-   {if(PLN=<0){
+   if(PLN<=0){
   stop("Waluta musi być wartością większą od zera!")
 }
   else if(!(is.numeric(PLN))){
@@ -142,7 +142,7 @@ Kupno_BGN = function(PLN){
   
 # HRK - kuna chorwacka      - Chorwacja
 Sprzedaz_HRK = function(HRK){ 
-  {if(HRK=<0){
+  if(HRK<=0){
   stop("Waluta musi być wartością większą od zera!")
 }
   else if(!(is.numeric(HRK))){
@@ -151,7 +151,7 @@ Sprzedaz_HRK = function(HRK){
   cat(paste("Przy wpłacie", HRK, "HRK, otrzymamy", round(HRK*Kursy_HRK$rates.PLN, digits = 2), "PLN." ))
 }
 Kupno_HRK = function(PLN){
-   {if(PLN=<0){
+   if(PLN<=0){
   stop("Waluta musi być wartością większą od zera!")
 }
   else if(!(is.numeric(PLN))){
@@ -162,105 +162,213 @@ Kupno_HRK = function(PLN){
   
 # CZK - korona czeska       - Czechy
 Sprzedaz_CZK = function(CZK){
-   {if(CZK=<0){
+   if(CZK<=0){
   stop("Waluta musi być wartością większą od zera!")
 }
   else if(!(is.numeric(CZK))){
     stop("Podaj wartość numeryczną!")
   }
-  cat(paste("Przy wpłacie", CZK, "CZK, otrzymamy", round(CZK*Kursy_CZK$rates.PLN, digits = 2), "PLN." ))
+ else cat(paste("Przy wpłacie", CZK, "CZK, otrzymamy", round(CZK*Kursy_CZK$rates.PLN, digits = 2), "PLN." ))
 }
 Kupno_CZK = function(PLN){
-   {if(PLN=<0){
+  if(PLN<=0){
   stop("Waluta musi być wartością większą od zera!")
 }
   else if(!(is.numeric(PLN))){
     stop("Podaj wartość numeryczną!")
   }
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.CZK, digits = 2), "CZK." ))
+ else cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.CZK, digits = 2), "CZK." ))
 }
   
 # DKK - korona duńska       - Dania
 Sprzedaz_DKK = function(DKK){
-   {if(DKK=<0){
+  if(DKK<=0){
   stop("Waluta musi być wartością większą od zera!")
 }
   else if(!(is.numeric(DKK))){
     stop("Podaj wartość numeryczną!")
   }
-  cat(paste("Przy wpłacie", DKK, "DKK, otrzymamy", round(DKK*Kursy_DKK$rates.PLN, digits = 2), "PLN." ))  
+  else cat(paste("Przy wpłacie", DKK, "DKK, otrzymamy", round(DKK*Kursy_DKK$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_DKK = function(PLN){
-   {if(PLN=<0){
+  if(PLN<=0){
   stop("Waluta musi być wartością większą od zera!")
 }
   else if(!(is.numeric(PLN))){
     stop("Podaj wartość numeryczną!")
   }
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.DKK, digits = 2), "DKK." ))  
+  else cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.DKK, digits = 2), "DKK." ))  
 }
 # CAD - dolar kanadyjski    - Kanada
-Sprzedaz_CAD = function(CAD){
-  cat(paste("Przy wpłacie", CAD, "CAD, otrzymamy", round(CAD*Kursy_CAD$rates.PLN, digits = 2), "PLN." ))  
+Sprzedaz_CAD = function(CAD){ 
+  if(CAD<=0){
+  stop("Waluta musi być wartością większą od zera!")
+}
+  else if(!(is.numeric(CAD))){
+    stop("Podaj wartość numeryczną!")
+  }
+  else cat(paste("Przy wpłacie", CAD, "CAD, otrzymamy", round(CAD*Kursy_CAD$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_CAD = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.CAD, digits = 2), "CAD." ))  
+  if(PLN<=0){
+    stop("Waluta musi być wartością większą od zera!")
+  }
+  else if(!(is.numeric(PLN))){
+    stop("Podaj wartość numeryczną!")
+  }
+  else cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.CAD, digits = 2), "CAD." ))  
 }
 # NOK - korona norweska     - Norwegia
 Sprzedaz_NOK = function(NOK){
-  cat(paste("Przy wpłacie", NOK, "NOK, otrzymamy", round(NOK*Kursy_NOK$rates.PLN, digits = 2), "PLN." ))  
+  if(NOK<=0){
+    stop("Waluta musi być wartością większą od zera!")
+  }
+  else if(!(is.numeric(NOK))){
+    stop("Podaj wartość numeryczną!")
+  }
+  else cat(paste("Przy wpłacie", NOK, "NOK, otrzymamy", round(NOK*Kursy_NOK$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_NOK = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.NOK, digits = 2), "NOK." ))  
+  if(PLN<=0){
+    stop("Waluta musi być wartością większą od zera!")
+  }
+  else if(!(is.numeric(PLN))){
+    stop("Podaj wartość numeryczną!")
+  }
+  else cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.NOK, digits = 2), "NOK." ))  
 }
 # RON - lej rumuński        - Rumunia
 Sprzedaz_RON = function(RON){
-  cat(paste("Przy wpłacie", RON, "RON, otrzymamy", round(RON*Kursy_RON$rates.PLN, digits = 2), "PLN." ))  
+  if(RON<=0){
+    stop("Waluta musi być wartością większą od zera!")
+  }
+  else if(!(is.numeric(RON))){
+    stop("Podaj wartość numeryczną!")
+  }
+  else cat(paste("Przy wpłacie", RON, "RON, otrzymamy", round(RON*Kursy_RON$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_RON = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.RON, digits = 2), "RON." ))  
+  if(PLN<=0){
+    stop("Waluta musi być wartością większą od zera!")
+  }
+  else if(!(is.numeric(PLN))){
+    stop("Podaj wartość numeryczną!")
+  }
+  else cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.RON, digits = 2), "RON." ))  
 }
 # CHF - frank szwajcarski   - Szwajcaria
 Sprzedaz_CHF = function(CHF){
-  cat(paste("Przy wpłacie", CHF, "CHF, otrzymamy", round(CHF*Kursy_CHF$rates.PLN, digits = 2), "PLN." ))  
+  if(CHF<=0){
+    stop("Waluta musi być wartością większą od zera!")
+  }
+  else if(!(is.numeric(CHF))){
+    stop("Podaj wartość numeryczną!")
+  }
+  else cat(paste("Przy wpłacie", CHF, "CHF, otrzymamy", round(CHF*Kursy_CHF$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_CHF = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.CHF, digits = 2), "CHF." ))  
+  if(PLN<=0){
+    stop("Waluta musi być wartością większą od zera!")
+  }
+  else if(!(is.numeric(PLN))){
+    stop("Podaj wartość numeryczną!")
+  }
+  else cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.CHF, digits = 2), "CHF." ))  
 }
 # SEK - korona szwedzka     - Szwecja
 Sprzedaz_SEK = function(SEK){
-  cat(paste("Przy wpłacie", SEK, "SEK, otrzymamy", round(SEK*Kursy_SEK$rates.PLN, digits = 2), "PLN." ))  
+  if(SEK<=0){
+    stop("Waluta musi być wartością większą od zera!")
+  }
+  else if(!(is.numeric(SEK))){
+    stop("Podaj wartość numeryczną!")
+  }
+  else cat(paste("Przy wpłacie", SEK, "SEK, otrzymamy", round(SEK*Kursy_SEK$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_SEK = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.SEK, digits = 2), "SEK." ))  
+  if(PLN<=0){
+    stop("Waluta musi być wartością większą od zera!")
+  }
+  else if(!(is.numeric(PLN))){
+    stop("Podaj wartość numeryczną!")
+  }
+  else cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.SEK, digits = 2), "SEK." ))  
 }
 # EUR - euro                - Unia Europejska (strefa euro)
 Sprzedaz_EUR = function(EUR){
-  cat(paste("Przy wpłacie", EUR, "EUR, otrzymamy", round(EUR*Kursy_EUR$rates.PLN, digits = 2), "PLN." ))  
+  if(EUR<=0){
+    stop("Waluta musi być wartością większą od zera!")
+  }
+  else if(!(is.numeric(EUR))){
+    stop("Podaj wartość numeryczną!")
+  }
+  else  cat(paste("Przy wpłacie", EUR, "EUR, otrzymamy", round(EUR*Kursy_EUR$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_EUR = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.EUR, digits = 2), "EUR." ))  
+  if(PLN<=0){
+    stop("Waluta musi być wartością większą od zera!")
+  }
+  else if(!(is.numeric(PLN))){
+    stop("Podaj wartość numeryczną!")
+  }
+  else cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.EUR, digits = 2), "EUR." ))  
 }
 # USD - dolar amerykański   - USA
 Sprzedaz_USD = function(USD){
-  cat(paste("Przy wpłacie", USD, "USD, otrzymamy", round(USD*Kursy_USD$rates.PLN, digits = 2), "PLN." ))  
+  if(USD<=0){
+  stop("Waluta musi być wartością większą od zera!")
+}
+  else if(!(is.numeric(USD))){
+    stop("Podaj wartość numeryczną!")
+  }
+  else cat(paste("Przy wpłacie", USD, "USD, otrzymamy", round(USD*Kursy_USD$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_USD = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.USD, digits = 2), "USD." ))  
+  if(PLN<=0){
+    stop("Waluta musi być wartością większą od zera!")
+  }
+  else if(!(is.numeric(PLN))){
+    stop("Podaj wartość numeryczną!")
+  }
+  else cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.USD, digits = 2), "USD." ))  
 }
 # HUF - forint węgierski    - Węgry
-Sprzedaz_HUF = function(HUF){
-  cat(paste("Przy wpłacie", HUF, "HUF, otrzymamy", round(HUF*Kursy_HUF$rates.PLN, digits = 2), "PLN." ))  
+Sprzedaz_HUF = function(HUF){ 
+  if(HUF<=0){
+    stop("Waluta musi być wartością większą od zera!")
+  }
+  else if(!(is.numeric(HUF))){
+    stop("Podaj wartość numeryczną!")
+  }
+  else cat(paste("Przy wpłacie", HUF, "HUF, otrzymamy", round(HUF*Kursy_HUF$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_HUF = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.HUF, digits = 2), "HUF." ))  
+  if(PLN<=0){
+    stop("Waluta musi być wartością większą od zera!")
+  }
+  else if(!(is.numeric(PLN))){
+    stop("Podaj wartość numeryczną!")
+  }
+  else cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.HUF, digits = 2), "HUF." ))  
 }
 # GBP - funt brytyjski      - Wielka Brytania
 Sprzedaz_GBP = function(GBP){
-  cat(paste("Przy wpłacie", GBP, "GBP, otrzymamy", round(GBP*Kursy_GBP$rates.PLN, digits = 2), "PLN." ))  
+  if(GBP<=0){
+    stop("Waluta musi być wartością większą od zera!")
+  }
+  else if(!(is.numeric(GBP))){
+    stop("Podaj wartość numeryczną!")
+  }
+  else cat(paste("Przy wpłacie", GBP, "GBP, otrzymamy", round(GBP*Kursy_GBP$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_GBP = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.GBP, digits = 2), "GBP." ))  
+  if(PLN<=0){
+    stop("Waluta musi być wartością większą od zera!")
+  }
+  else if(!(is.numeric(PLN))){
+    stop("Podaj wartość numeryczną!")
+  }
+  else cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.GBP, digits = 2), "GBP." ))  
 }
 # Program -----------------------------------------------------------------
 # 1. Przelicznik AUD (dolary australijskie)
