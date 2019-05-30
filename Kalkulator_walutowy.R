@@ -3,9 +3,6 @@
 # 
 # Aby program zadziałał, należy wczytać dane z Założenia oraz Wczytywanie Danych
 # a następnie przejść do podsekcji Program i przeliczać według aktualnych kursów.
---
-  --
---
 #
 # Założenia ---------------------------------------------------------------
 install.packages('httr')
