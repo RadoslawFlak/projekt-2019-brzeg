@@ -23,8 +23,7 @@ options(stringsAsFactors = FALSE)
     Pokaz_Kursy_PLN = content(Pobierz_Kursy_PLN)
     Kursy_PLN = as.data.frame(Pokaz_Kursy_PLN)
   }
-  # pizda 
-  
+ 
   #AUD
   AUD = {
     Pobierz_Kursy_AUD = GET(url="https://api.exchangeratesapi.io/latest?base=AUD")
@@ -32,7 +31,12 @@ options(stringsAsFactors = FALSE)
     Kursy_AUD = as.data.frame(Pokaz_Kursy_AUD)
   }
   
-  #Pozostałe
+  #BGN
+  BGN = {
+    Pobierz_Kursy_BGN = GET(url="https://api.exchangeratesapi.io/latest?base=BGN")
+    Pokaz_Kursy_BGN = content(Pobierz_Kursy_BGN)
+    Kursy_BGN = as.data.frame(Pokaz_Kursy_BGN)
+  }
 }
 # Funkcje:
 {
