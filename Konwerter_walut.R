@@ -264,11 +264,11 @@ Kupno_GBP = function(PLN){
 # Wczytaj dane:
 
 # 1. Przelicznik AUD (dolary australijskie)
-Kupno_AUD(100)
-Sprzedaz_AUD(100)
+Kupno_AUD()
+Sprzedaz_AUD()
 # 2. Przelicznik BGN (lew bułgarski)
-Kupno_BGN(11)
-Sprzedaz_BGN(11)
+Kupno_BGN()
+Sprzedaz_BGN()
 # 3. Przelicznik CAD (dolary kanadyjskie)
 Kupno_CAD()
 Sprzedaz_CAD()
