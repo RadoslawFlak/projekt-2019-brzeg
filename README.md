@@ -4,8 +4,9 @@ projekt-2019-brzeg created by GitHub Classroom
 
 Człokowie grupy Marta Szafer, Aleksander Brzeg, Radosław Flak. 
 
-Tematem naszego projektu jest temat nr 6, czyli inny. Postanowiliśmy stworzyć kalkulator walutowy. 
-[dodajmy link]
+Tematem naszego projektu jest temat nr 1, czyli zbiór funkcji do przeliczania jednostek. 
+
+Postanowiliśmy z tego powodu stworzyć konwerter walut czy jak ktoś woli to nazywać - Kalkulator walutowy.
 
 
-[tu radku dodaj instrukcję]
+[tutaj dodajcie też coś]

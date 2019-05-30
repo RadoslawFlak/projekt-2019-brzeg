@@ -1,19 +1,16 @@
-# Program ma przeprowadzać konwersję walut wg. przelicznika na dzień 21 maja 2019.
-# Zakładamy, że program byłby skierowany przede wszystkim do polskich odbiorców, którzy chcieliby wymienić polskiego nominały na zagraniczne i odwrotnie.
+# Kalkulator walutowy
+# Działający na ogólnodostępnym API - https://exchangeratesapi.io
 # Wybraliśmy 14 najpopularniejszych przeliczników według strony kantory.pl
 #
 # Ponadto celu późniejszej optymalniejszej i szybszej zmiany kursów użyliśmy wartości nie w wzorze funkcji a jako osobny argument.
 #
 # Aby wszystko zadziałało poprawnie, należy przejść do podsekcji Program (!!POPRAW!! wers) i w zależności od interesującej nas wymiany waluty, wpisać w odpowiednie pole sumę.
-------------------------------
-# Założenia: 
-{
+#
+# Założenia ---------------------------------------------------------------
 install.packages('httr')
 library(httr)
 options(stringsAsFactors = FALSE)
-}
-# Wczytywanie danych:
-{
+# Wczytywanie Danych -------------------------------------------------------------
 #Wczytywanie danych z wczytywarek niżej
 #!! Nie mam pojęcia na ten moment i czasu aby coś sensownego zrobić, możecie postarać się za mnie coś wymyślić z wczytywaniem wszystkich
 
@@ -24,14 +21,14 @@ options(stringsAsFactors = FALSE)
     Kursy_PLN = as.data.frame(Pokaz_Kursy_PLN)
   }
  
-  #AUD
+#AUD
   AUD = {
     Pobierz_Kursy_AUD = GET(url="https://api.exchangeratesapi.io/latest?base=AUD")
     Pokaz_Kursy_AUD = content(Pobierz_Kursy_AUD)
     Kursy_AUD = as.data.frame(Pokaz_Kursy_AUD)
   }
   
-  #BGN
+#BGN
   BGN = {
     Pobierz_Kursy_BGN = GET(url="https://api.exchangeratesapi.io/latest?base=BGN")
     Pokaz_Kursy_BGN = content(Pobierz_Kursy_BGN)
@@ -45,14 +42,14 @@ options(stringsAsFactors = FALSE)
     Kursy_HRK = as.data.frame(Pokaz_Kursy_HRK)
   }
   
-  # CZK
+  #CZK
   CZK = {
     Pobierz_Kursy_CZK = GET(url="https://api.exchangeratesapi.io/latest?base=CZK")
     Pokaz_Kursy_CZK = content(Pobierz_Kursy_CZK)
     Kursy_CZK = as.data.frame(Pokaz_Kursy_CZK)
   }
   
-  # DKK
+  #DKK
   DKK = {
     Pobierz_Kursy_DKK = GET(url="https://api.exchangeratesapi.io/latest?base=DKK")
     Pokaz_Kursy_DKK = content(Pobierz_Kursy_DKK)
@@ -89,9 +86,9 @@ options(stringsAsFactors = FALSE)
   
   #SEK
   SEK = {
-  Pobierz_Kursy_SEK = GET(url="https://api.exchangeratesapi.io/latest?base=SEK")
-  Pokaz_Kursy_SEK = content(Pobierz_Kursy_SEK)
-  Kursy_SEK = as.data.frame(Pokaz_Kursy_SEK)
+    Pobierz_Kursy_SEK = GET(url="https://api.exchangeratesapi.io/latest?base=SEK")
+    Pokaz_Kursy_SEK = content(Pobierz_Kursy_SEK)
+    Kursy_SEK = as.data.frame(Pokaz_Kursy_SEK)
   }
 
   #EUR
@@ -108,25 +105,20 @@ options(stringsAsFactors = FALSE)
     Kursy_USD = as.data.frame(Pokaz_Kursy_USD)
   }
   
-  # HUF
+  #HUF
   HUF = {
     Pobierz_Kursy_HUF = GET(url="https://api.exchangeratesapi.io/latest?base=HUF")
     Pokaz_Kursy_HUF = content(Pobierz_Kursy_HUF)
     Kursy_HUF = as.data.frame(Pokaz_Kursy_HUF)
   }
   
-  # GBK
+  #GBK
   GBK = {
     Pobierz_Kursy_GBK = GET(url="https://api.exchangeratesapi.io/latest?base=GBK")
     Pokaz_Kursy_GBK = content(Pobierz_Kursy_GBK)
     Kursy_GBK = as.data.frame(Pokaz_Kursy_GBK)
   }
-  
-}
-# Funkcje:
-{
-# Legenda:
-
+# Funkcje -----------------------------------------------------------------
 # AUD - dolar australijski  - Australia
 Sprzedaz_AUD = function(AUD){
   cat(paste("Przy wpłacie", AUD, "AUD, otrzymamy", round(AUD*Kursy_AUD$rates.PLN, digits = 2), "PLN." ))  
@@ -258,9 +250,7 @@ Sprzedaz_GBP = function(GBP){
 Kupno_GBP = function(PLN){
   cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/GBP_K, digits = 2), "GBP." ))  
 }
-}
-# Program:
-{
+# Program -----------------------------------------------------------------
 # Wczytaj dane:
 
 # 1. Przelicznik AUD (dolary australijskie)
@@ -305,5 +295,6 @@ Sprzedaz_SEK()
 # 14. Przelicznik USD (dolary amerykańskie)
 Kupno_USD()
 Sprzedaz_USD()
-}
-# Dziękujemy za korzystanie z naszych usług. 
+
+
+# Dziękujemy za skorzystanie z naszego kalkulatora.
