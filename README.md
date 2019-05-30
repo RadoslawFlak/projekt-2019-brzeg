@@ -8,6 +8,8 @@ Tematem naszego projektu jest temat nr 6.
 
 Postanowiliśmy stworzyć konwerter walut czy jak ktoś woli to nazywać - Kalkulator walutowy.
 
+https://github.com/spacea/projekt-2019-brzeg/blob/master/Kalkulator_walutowy.R
+
 W naszym kalkulatorze są dostępne przeliczniki kupna i sprzedaży niżej podanych walut:
 
 -> dolar australijski (AUD)
