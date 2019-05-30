@@ -37,6 +37,90 @@ options(stringsAsFactors = FALSE)
     Pokaz_Kursy_BGN = content(Pobierz_Kursy_BGN)
     Kursy_BGN = as.data.frame(Pokaz_Kursy_BGN)
   }
+  
+  #HRK
+  HRK = {
+    Pobierz_Kursy_HRK = GET(url="https://api.exchangeratesapi.io/latest?base=HRK")
+    Pokaz_Kursy_HRK = content(Pobierz_Kursy_HRK)
+    Kursy_HRK = as.data.frame(Pokaz_Kursy_HRK)
+  }
+  
+  # CZK
+  CZK = {
+    Pobierz_Kursy_CZK = GET(url="https://api.exchangeratesapi.io/latest?base=CZK")
+    Pokaz_Kursy_CZK = content(Pobierz_Kursy_CZK)
+    Kursy_CZK = as.data.frame(Pokaz_Kursy_CZK)
+  }
+  
+  # DKK
+  DKK = {
+    Pobierz_Kursy_DKK = GET(url="https://api.exchangeratesapi.io/latest?base=DKK")
+    Pokaz_Kursy_DKK = content(Pobierz_Kursy_DKK)
+    Kursy_DKK = as.data.frame(Pokaz_Kursy_DKK)
+  }
+  
+  #CAD
+  CAD = {
+    Pobierz_Kursy_CAD = GET(url="https://api.exchangeratesapi.io/latest?base=CAD")
+    Pokaz_Kursy_CAD = content(Pobierz_Kursy_CAD)
+    Kursy_CAD = as.data.frame(Pokaz_Kursy_CAD)
+  }
+  
+  #NOK
+  NOK = {
+    Pobierz_Kursy_NOK = GET(url="https://api.exchangeratesapi.io/latest?base=NOK")
+    Pokaz_Kursy_NOK = content(Pobierz_Kursy_NOK)
+    Kursy_NOK = as.data.frame(Pokaz_Kursy_NOK)
+  }
+  
+  #ROK
+  RON = {
+    Pobierz_Kursy_RON = GET(url="https://api.exchangeratesapi.io/latest?base=RON")
+    Pokaz_Kursy_RON = content(Pobierz_Kursy_RON)
+    Kursy_RON = as.data.frame(Pokaz_Kursy_RON)
+  }
+  
+  #CHF
+  CHF = {
+    Pobierz_Kursy_CHF = GET(url="https://api.exchangeratesapi.io/latest?base=CHF")
+    Pokaz_Kursy_CHF = content(Pobierz_Kursy_CHF)
+    Kursy_CKF = as.data.frame(Pokaz_Kursy_CHF)
+  }
+  
+  #SEK
+  SEK = {
+  Pobierz_Kursy_SEK = GET(url="https://api.exchangeratesapi.io/latest?base=SEK")
+  Pokaz_Kursy_SEK = content(Pobierz_Kursy_SEK)
+  Kursy_SEK = as.data.frame(Pokaz_Kursy_SEK)
+  }
+
+  #EUR
+  EUR = {
+    Pobierz_Kursy_EUR = GET(url="https://api.exchangeratesapi.io/latest?base=EUR")
+    Pokaz_Kursy_EUR = content(Pobierz_Kursy_EUR)
+    Kursy_EUR = as.data.frame(Pokaz_Kursy_EUR)
+  }
+  
+  #USD
+  USD = {
+    Pobierz_Kursy_USD = GET(url="https://api.exchangeratesapi.io/latest?base=USD")
+    Pokaz_Kursy_USD = content(Pobierz_Kursy_USD)
+    Kursy_USD = as.data.frame(Pokaz_Kursy_USD)
+  }
+  
+  # HUF
+  HUF = {
+    Pobierz_Kursy_HUF = GET(url="https://api.exchangeratesapi.io/latest?base=HUF")
+    Pokaz_Kursy_HUF = content(Pobierz_Kursy_HUF)
+    Kursy_HUF = as.data.frame(Pokaz_Kursy_HUF)
+  }
+  # GBK
+  GBK = {
+    Pobierz_Kursy_GBK = GET(url="https://api.exchangeratesapi.io/latest?base=GBK")
+    Pokaz_Kursy_GBK = content(Pobierz_Kursy_GBK)
+    Kursy_AUD = as.data.frame(Pokaz_Kursy_AUD)
+  }
+  
 }
 # Funkcje:
 {
