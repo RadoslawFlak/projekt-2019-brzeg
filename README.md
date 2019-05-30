@@ -44,6 +44,8 @@ JAK KORZYSTAĆ Z NASZEGO KONWERTERA?
 Wybierz czy chcesz sprzedać czy kupić daną walutę i wpisz odpowiednio kupno/sprzedaz, wpisz skrót danej waluty
 oddziel te wartości podkreślnikiem a w nawiasie wpisz kwotę, którą chcesz wymienić.
 
+PAMIĘTAJ, ŻE WARTOŚĆ MUSI BYĆ WARTOŚCIĄ NUMERYCZNĄ, DODATNIĄ!!
+
 Przykład użycia konwertera:
 
 1. Załóżmy, że chcemy wymienić 100 dolarów amerykańskich na złotówki.
