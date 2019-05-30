@@ -23,6 +23,7 @@ options(stringsAsFactors = FALSE)
     Pokaz_Kursy_PLN = content(Pobierz_Kursy_PLN)
     Kursy_PLN = as.data.frame(Pokaz_Kursy_PLN)
   }
+  # pizda 
   
   #AUD
   AUD = {
