@@ -150,13 +150,11 @@ Kupno_CZK = function(PLN){
 }
 
 # DKK - korona duńska       - Dania
-DKK_K = 0.5643
-DKK_S = 0.5845
 Sprzedaz_DKK = function(DKK){
-  cat(paste("Przy wpłacie", DKK, "DKK, otrzymamy", round(DKK*DKK_S, digits = 2), "PLN." ))  
+  cat(paste("Przy wpłacie", DKK, "DKK, otrzymamy", round(DKK*Kursy_DKK_S$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_DKK = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/DKK_K, digits = 2), "DKK." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_DKK_K$rates.DKK, digits = 2), "DKK." ))  
 }
 
 # CAD - dolar kanadyjski    - Kanada
