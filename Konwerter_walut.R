@@ -114,11 +114,12 @@ options(stringsAsFactors = FALSE)
     Pokaz_Kursy_HUF = content(Pobierz_Kursy_HUF)
     Kursy_HUF = as.data.frame(Pokaz_Kursy_HUF)
   }
+  
   # GBK
   GBK = {
     Pobierz_Kursy_GBK = GET(url="https://api.exchangeratesapi.io/latest?base=GBK")
     Pokaz_Kursy_GBK = content(Pobierz_Kursy_GBK)
-    Kursy_AUD = as.data.frame(Pokaz_Kursy_AUD)
+    Kursy_GBK = as.data.frame(Pokaz_Kursy_GBK)
   }
   
 }
