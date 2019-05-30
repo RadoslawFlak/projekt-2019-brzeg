@@ -137,30 +137,26 @@ Kupno_AUD = function(PLN){
 
 # BGN - lew bułgarski       - Bułgaria
 Sprzedaz_BGN = function(BGN){
-  cat(paste("Przy wpłacie", BGN, "PLN, otrzymamy", round(BGN*Kursy_BGN$rates.PLN, digits = 2), "PLN." ))  
+  cat(paste("Przy wpłacie", BGN, "BGN, otrzymamy", round(BGN*Kursy_BGN$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_BGN = function(PLN){
   cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.BGN, digits = 2), "BGN." )) 
 }
 
 # HRK - kuna chorwacka      - Chorwacja
-HRK_K = 0.5609
-HRK_S = 0.6055
 Sprzedaz_HRK = function(HRK){
-  cat(paste("Przy wpłacie", HRK, "HRK, otrzymamy", round(HRK*HRK_S, digits = 2), "PLN." ))  
+  cat(paste("Przy wpłacie", HRK, "HRK, otrzymamy", round(HRK*Kursy_HRK$rates.PLN, digits = 2), "PLN." ))
 }
 Kupno_HRK = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/HRK_K, digits = 2), "HRK." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.HRK, digits = 2), "HRK." )) 
 }
 
 # CZK - korona czeska       - Czechy
-CZK_K = 0.1646
-CZK_S = 0.1704
 Sprzedaz_CZK = function(CZK){
-  cat(paste("Przy wpłacie", CZK, "CZK, otrzymamy", round(CZK*CZK_S, digits = 2), "PLN." ))  
+  cat(paste("Przy wpłacie", CZK, "CZK, otrzymamy", round(CZK*Kursy_CZK$rates.PLN, digits = 2), "PLN." ))
 }
 Kupno_CZK = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/CZK_K, digits = 2), "CZK." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.CZK, digits = 2), "CZK." ))
 }
 
 # DKK - korona duńska       - Dania
@@ -271,8 +267,8 @@ Kupno_GBP = function(PLN){
 Kupno_AUD(100)
 Sprzedaz_AUD(100)
 # 2. Przelicznik BGN (lew bułgarski)
-Kupno_BGN()
-Sprzedaz_BGN()
+Kupno_BGN(11)
+Sprzedaz_BGN(11)
 # 3. Przelicznik CAD (dolary kanadyjskie)
 Kupno_CAD()
 Sprzedaz_CAD()
