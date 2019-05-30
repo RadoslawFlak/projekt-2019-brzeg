@@ -1,10 +1,11 @@
 # Kalkulator walutowy
 # Działający na ogólnodostępnym API - https://exchangeratesapi.io
-# Wybraliśmy 14 najpopularniejszych przeliczników według strony kantory.pl
-#
-# Ponadto celu późniejszej optymalniejszej i szybszej zmiany kursów użyliśmy wartości nie w wzorze funkcji a jako osobny argument.
-#
-# Aby wszystko zadziałało poprawnie, należy przejść do podsekcji Program (!!POPRAW!! wers) i w zależności od interesującej nas wymiany waluty, wpisać w odpowiednie pole sumę.
+# 
+# Aby program zadziałał, należy wczytać dane z Założenia oraz Wczytywanie Danych
+# a następnie przejść do podsekcji Program i przeliczać według aktualnych kursów.
+--
+  --
+--
 #
 # Założenia ---------------------------------------------------------------
 install.packages('httr')
