@@ -4,9 +4,23 @@ projekt-2019-brzeg created by GitHub Classroom
 
 Człokowie grupy Marta Szafer, Aleksander Brzeg, Radosław Flak. 
 
-Tematem naszego projektu jest temat nr 1, czyli zbiór funkcji do przeliczania jednostek. 
+Tematem naszego projektu jest temat nr 6.  
 
-Postanowiliśmy z tego powodu stworzyć konwerter walut czy jak ktoś woli to nazywać - Kalkulator walutowy.
+Postanowiliśmy stworzyć konwerter walut czy jak ktoś woli to nazywać - Kalkulator walutowy.
 
+W naszym konwerterze są dostępne przeliczniki kupna i sprzedaży niżej podanych walut:
 
-[tutaj dodajcie też coś]
+-> dolar australijski (AUD)
+-> lew bułgarski (BGN)
+-> dolar kanadyjski (CAD)
+-> frank szawajcarski (CHF)
+-> korona czeska (CZK)
+-> korona duńska (DKK)
+-> euro (EUR)
+-> funt brytyjski (GBP)
+-> kuna chorwacka (HRK)
+-> forint węgierski (HUF)
+-> korona norweska (NOK)
+-> lej rumuński (RON)
+-> korona szwedzka (SEK)
+-> dolar amerykański (USD)
