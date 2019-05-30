@@ -101,38 +101,102 @@
   }
 # Funkcje -----------------------------------------------------------------
 # AUD - dolar australijski  - Australia
-Sprzedaz_AUD = function(AUD){
+Sprzedaz_AUD = function(AUD){ 
+  {if(AUD<0){
+  stop("Waluta musi być wartością dodatnią!")
+}
+  else if(!(is.numeric(AUD))){
+    stop("Podaj wartość numeryczną!")
+  }
   cat(paste("Przy wpłacie", AUD, "AUD, otrzymamy", round(AUD*Kursy_AUD$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_AUD = function(PLN){
+   {if(PLN<0){
+  stop("Waluta musi być wartością dodatnią!")
+}
+  else if(!(is.numeric(PLN))){
+    stop("Podaj wartość numeryczną!")
+  }
   cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.AUD, digits = 2), "AUD." ))  
 }
+  
 # BGN - lew bułgarski       - Bułgaria
 Sprzedaz_BGN = function(BGN){
+   {if(BGN<0){
+  stop("Waluta musi być wartością dodatnią!")
+}
+  else if(!(is.numeric(BGN))){
+    stop("Podaj wartość numeryczną!")
+  }
   cat(paste("Przy wpłacie", BGN, "BGN, otrzymamy", round(BGN*Kursy_BGN$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_BGN = function(PLN){
+   {if(PLN<0){
+  stop("Waluta musi być wartością dodatnią!")
+}
+  else if(!(is.numeric(PLN))){
+    stop("Podaj wartość numeryczną!")
+  }
   cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.BGN, digits = 2), "BGN." )) 
 }
+  
 # HRK - kuna chorwacka      - Chorwacja
-Sprzedaz_HRK = function(HRK){
+Sprzedaz_HRK = function(HRK){ 
+  {if(HRK<0){
+  stop("Waluta musi być wartością dodatnią!")
+}
+  else if(!(is.numeric(HRK))){
+    stop("Podaj wartość numeryczną!")
+  }
   cat(paste("Przy wpłacie", HRK, "HRK, otrzymamy", round(HRK*Kursy_HRK$rates.PLN, digits = 2), "PLN." ))
 }
 Kupno_HRK = function(PLN){
+   {if(PLN<0){
+  stop("Waluta musi być wartością dodatnią!")
+}
+  else if(!(is.numeric(PLN))){
+    stop("Podaj wartość numeryczną!")
+  }
   cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.HRK, digits = 2), "HRK." )) 
 }
+  
 # CZK - korona czeska       - Czechy
 Sprzedaz_CZK = function(CZK){
+   {if(CZK<0){
+  stop("Waluta musi być wartością dodatnią!")
+}
+  else if(!(is.numeric(CZK))){
+    stop("Podaj wartość numeryczną!")
+  }
   cat(paste("Przy wpłacie", CZK, "CZK, otrzymamy", round(CZK*Kursy_CZK$rates.PLN, digits = 2), "PLN." ))
 }
 Kupno_CZK = function(PLN){
+   {if(PLN<0){
+  stop("Waluta musi być wartością dodatnią!")
+}
+  else if(!(is.numeric(PLN))){
+    stop("Podaj wartość numeryczną!")
+  }
   cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.CZK, digits = 2), "CZK." ))
 }
+  
 # DKK - korona duńska       - Dania
 Sprzedaz_DKK = function(DKK){
+   {if(DKK<0){
+  stop("Waluta musi być wartością dodatnią!")
+}
+  else if(!(is.numeric(DKK))){
+    stop("Podaj wartość numeryczną!")
+  }
   cat(paste("Przy wpłacie", DKK, "DKK, otrzymamy", round(DKK*Kursy_DKK$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_DKK = function(PLN){
+   {if(PLN<0){
+  stop("Waluta musi być wartością dodatnią!")
+}
+  else if(!(is.numeric(PLN))){
+    stop("Podaj wartość numeryczną!")
+  }
   cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_PLN$rates.DKK, digits = 2), "DKK." ))  
 }
 # CAD - dolar kanadyjski    - Kanada
