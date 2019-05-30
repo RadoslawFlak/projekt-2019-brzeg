@@ -33,84 +33,84 @@ options(stringsAsFactors = FALSE)
     Kursy_BGN = as.data.frame(Pokaz_Kursy_BGN)
   }
   
-  #HRK
+#HRK
   HRK = {
     Pobierz_Kursy_HRK = GET(url="https://api.exchangeratesapi.io/latest?base=HRK")
     Pokaz_Kursy_HRK = content(Pobierz_Kursy_HRK)
     Kursy_HRK = as.data.frame(Pokaz_Kursy_HRK)
   }
   
-  #CZK
+#CZK
   CZK = {
     Pobierz_Kursy_CZK = GET(url="https://api.exchangeratesapi.io/latest?base=CZK")
     Pokaz_Kursy_CZK = content(Pobierz_Kursy_CZK)
     Kursy_CZK = as.data.frame(Pokaz_Kursy_CZK)
   }
   
-  #DKK
+#DKK
   DKK = {
     Pobierz_Kursy_DKK = GET(url="https://api.exchangeratesapi.io/latest?base=DKK")
     Pokaz_Kursy_DKK = content(Pobierz_Kursy_DKK)
     Kursy_DKK = as.data.frame(Pokaz_Kursy_DKK)
   }
   
-  #CAD
+#CAD
   CAD = {
     Pobierz_Kursy_CAD = GET(url="https://api.exchangeratesapi.io/latest?base=CAD")
     Pokaz_Kursy_CAD = content(Pobierz_Kursy_CAD)
     Kursy_CAD = as.data.frame(Pokaz_Kursy_CAD)
   }
   
-  #NOK
+#NOK
   NOK = {
     Pobierz_Kursy_NOK = GET(url="https://api.exchangeratesapi.io/latest?base=NOK")
     Pokaz_Kursy_NOK = content(Pobierz_Kursy_NOK)
     Kursy_NOK = as.data.frame(Pokaz_Kursy_NOK)
   }
   
-  #ROK
+#ROK
   RON = {
     Pobierz_Kursy_RON = GET(url="https://api.exchangeratesapi.io/latest?base=RON")
     Pokaz_Kursy_RON = content(Pobierz_Kursy_RON)
     Kursy_RON = as.data.frame(Pokaz_Kursy_RON)
   }
   
-  #CHF
+#CHF
   CHF = {
     Pobierz_Kursy_CHF = GET(url="https://api.exchangeratesapi.io/latest?base=CHF")
     Pokaz_Kursy_CHF = content(Pobierz_Kursy_CHF)
     Kursy_CKF = as.data.frame(Pokaz_Kursy_CHF)
   }
   
-  #SEK
+#SEK
   SEK = {
     Pobierz_Kursy_SEK = GET(url="https://api.exchangeratesapi.io/latest?base=SEK")
     Pokaz_Kursy_SEK = content(Pobierz_Kursy_SEK)
     Kursy_SEK = as.data.frame(Pokaz_Kursy_SEK)
   }
 
-  #EUR
+#EUR
   EUR = {
     Pobierz_Kursy_EUR = GET(url="https://api.exchangeratesapi.io/latest?base=EUR")
     Pokaz_Kursy_EUR = content(Pobierz_Kursy_EUR)
     Kursy_EUR = as.data.frame(Pokaz_Kursy_EUR)
   }
   
-  #USD
+#USD
   USD = {
     Pobierz_Kursy_USD = GET(url="https://api.exchangeratesapi.io/latest?base=USD")
     Pokaz_Kursy_USD = content(Pobierz_Kursy_USD)
     Kursy_USD = as.data.frame(Pokaz_Kursy_USD)
   }
   
-  #HUF
+#HUF
   HUF = {
     Pobierz_Kursy_HUF = GET(url="https://api.exchangeratesapi.io/latest?base=HUF")
     Pokaz_Kursy_HUF = content(Pobierz_Kursy_HUF)
     Kursy_HUF = as.data.frame(Pokaz_Kursy_HUF)
   }
   
-  #GBK
+#GBK
   GBK = {
     Pobierz_Kursy_GBK = GET(url="https://api.exchangeratesapi.io/latest?base=GBK")
     Pokaz_Kursy_GBK = content(Pobierz_Kursy_GBK)
@@ -151,100 +151,86 @@ Kupno_CZK = function(PLN){
 
 # DKK - korona duńska       - Dania
 Sprzedaz_DKK = function(DKK){
-  cat(paste("Przy wpłacie", DKK, "DKK, otrzymamy", round(DKK*Kursy_DKK_S$rates.PLN, digits = 2), "PLN." ))  
+  cat(paste("Przy wpłacie", DKK, "DKK, otrzymamy", round(DKK*Kursy_DKK$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_DKK = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_DKK_K$rates.DKK, digits = 2), "DKK." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_DKK$rates.DKK, digits = 2), "DKK." ))  
 }
 
 # CAD - dolar kanadyjski    - Kanada
-CAD_K = 2.8289
-CAD_S = 2.8985
 Sprzedaz_CAD = function(CAD){
-  cat(paste("Przy wpłacie", CAD, "CAD, otrzymamy", round(CAD*CAD_S, digits = 2), "PLN." ))  
+  cat(paste("Przy wpłacie", CAD, "CAD, otrzymamy", round(CAD*Kursy_CAD$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_CAD = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/CAD_K, digits = 2), "CAD." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_CAD$rates.CAD, digits = 2), "CAD." ))  
 }
 
 # NOK - korona norweska     - Norwegia
-NOK_K = 0.4302
-NOK_S = 0.4442
 Sprzedaz_NOK = function(NOK){
-  cat(paste("Przy wpłacie", NOK, "NOK, otrzymamy", round(NOK*NOK_S, digits = 2), "PLN." ))  
+  cat(paste("Przy wpłacie", NOK, "NOK, otrzymamy", round(NOK*Kursy_NOK$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_NOK = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/NOK_K, digits = 2), "NOK." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_NOK$rates.NOK, digits = 2), "NOK." ))  
 }
 
 # RON - lej rumuński        - Rumunia
-RON_K = 0.9044
-RON_S = 0.9624
 Sprzedaz_RON = function(RON){
-  cat(paste("Przy wpłacie", RON, "RON, otrzymamy", round(RON*RON_S, digits = 2), "PLN." ))  
+  cat(paste("Przy wpłacie", RON, "RON, otrzymamy", round(RON*Kursy_RON$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_RON = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/RON_K, digits = 2), "RON." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_RON$rates.RON, digits = 2), "RON." ))  
 }
 
 # CHF - frank szwajcarski   - Szwajcaria
-CHF_K = 3.7913
-CHF_S = 3.8393
 Sprzedaz_CHF = function(CHF){
-  cat(paste("Przy wpłacie", CHF, "CHF, otrzymamy", round(CHF*CHF_S, digits = 2), "PLN." ))  
+  cat(paste("Przy wpłacie", CHF, "CHF, otrzymamy", round(CHF*Kursy_CHF$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_CHF = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/CHF_K, digits = 2), "CHF." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_CHF$rates.CHF, digits = 2), "CHF." ))  
 }
 
 # SEK - korona szwedzka     - Szwecja
-SEK_K = 0.3882
-SEK_S = 0.4048
 Sprzedaz_SEK = function(SEK){
-  cat(paste("Przy wpłacie", SEK, "SEK, otrzymamy", round(SEK*SEK_S, digits = 2), "PLN." ))  
+  cat(paste("Przy wpłacie", SEK, "SEK, otrzymamy", round(SEK*Kursy_SEK$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_SEK = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/SEK_K, digits = 2), "SEK." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_SEK$rates.SEK, digits = 2), "SEK." ))  
 }
 
 # EUR - euro                - Unia Europejska (strefa euro)
-EUR_K = 4.2609
-EUR_S = 4.3270
 Sprzedaz_EUR = function(EUR){
-  cat(paste("Przy wpłacie", EUR, "EUR, otrzymamy", round(EUR*EUR_S, digits = 2), "PLN." ))  
+  cat(paste("Przy wpłacie", EUR, "EUR, otrzymamy", round(EUR*Kursy_EUR$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_EUR = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/EUR_K, digits = 2), "EUR." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_EUR$rates.EUR, digits = 2), "EUR." ))  
 }
 
 # USD - dolar amerykański   - USA
-USD_K = 3.8220
-USD_S = 3.8949
 Sprzedaz_USD = function(USD){
-  cat(paste("Przy wpłacie", USD, "USD, otrzymamy", round(USD*USD_S, digits = 2), "PLN." ))  
+  cat(paste("Przy wpłacie", USD, "USD, otrzymamy", round(USD*kURSY_USD$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_USD = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/USD_K, digits = 2), "USD." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_USD$rates.USD, digits = 2), "USD." ))  
 }
 
 # HUF - forint węgierski    - Węgry
 HUF_K = 0.7516
 HUF_S = 0.8011
 Sprzedaz_HUF = function(HUF){
-  cat(paste("Przy wpłacie", HUF, "HUF, otrzymamy", round(HUF*HUF_S, digits = 2), "PLN." ))  
+  cat(paste("Przy wpłacie", HUF, "HUF, otrzymamy", round(HUF*Kursy_HUF$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_HUF = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/HUF_K, digits = 2), "HUF." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_HUF$rates.HUF, digits = 2), "HUF." ))  
 }
 
 # GBP - funt brytyjski      - Wielka Brytania
 GBP_K = 4.8568
 GBP_S = 4.9380
 Sprzedaz_GBP = function(GBP){
-  cat(paste("Przy wpłacie", GBP, "GBP, otrzymamy", round(GBP*GBP_S, digits = 2), "PLN." ))  
+  cat(paste("Przy wpłacie", GBP, "GBP, otrzymamy", round(GBP*Kursy_GBP$rates.PLN, digits = 2), "PLN." ))  
 }
 Kupno_GBP = function(PLN){
-  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN/GBP_K, digits = 2), "GBP." ))  
+  cat(paste("Przy wpłacie", PLN, "PLN, otrzymamy", round(PLN*Kursy_GBP$rates.GBP, digits = 2), "GBP." ))  
 }
 # Program -----------------------------------------------------------------
 # Wczytaj dane:
